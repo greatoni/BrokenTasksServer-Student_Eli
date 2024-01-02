@@ -24,9 +24,9 @@ The general concepts of logic is mainly completed; however syntax, connections, 
 ## Number of Bugs
 So that you have a light at the end of the tunnel, there are a total of **30** errors within the complete build.
 - Base Files
-  - 5 issues
+  - 4 issues
 - Models
-  - 5 issues
+  - 4 issues
 - Controllers
   - 15 issues
 - Middleware

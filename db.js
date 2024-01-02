@@ -1,13 +1,17 @@
-
+require('dotenv').config(); 
+const mongoose = require('mongoose')
 const connection = process.env.DB;
-const collection = process.env;
+const collection = process.env.COLL;
 
 const db = async () => {
     try {
         
         mongoose.set(`strictQuery`, true);
 
-        await mongoose.connect(`${connection}/${collection}`);
+        await mongoose.connect(`${connection}/${collection}`, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        });
 
         console.log(`DB Connected to: ${connection}/${collection}`);
 
@@ -16,4 +20,4 @@ const db = async () => {
     }
 }
 
-module.exports = { db, mongoose };
+module.exports = { db, mongoose};

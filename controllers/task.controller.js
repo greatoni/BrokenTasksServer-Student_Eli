@@ -1,4 +1,4 @@
-const router = require('express');
+const router = require('express').Router();
 const { Task } = require('../models');
 const { errorHandling, successHandling, incompleteHandling } = require('../helpers');
 const validateSession = require('../middleware/validate-session');
@@ -109,3 +109,4 @@ router.delete('/:id', validateSession, async(req,res) => {
     }
 })
 
+module.exports = router;
