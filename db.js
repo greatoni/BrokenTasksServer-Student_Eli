@@ -5,7 +5,7 @@ const collection = process.env.COLL;
 
 const db = async () => {
     try {
-        
+        console.log(connection, collection);
         mongoose.set(`strictQuery`, true);
 
         await mongoose.connect(`${connection}/${collection}`, {
